@@ -1,0 +1,12 @@
+
+*.txt
+nwsync/bin/nwsync_crypto_keygen
+nwsync/bin/nwsync_crypto_keyinfo
+nwsync/bin/nwsync_crypto_sign
+*.did
+*.hak
+*.tlk
+*.sqlite3
+*.bak
+*.mod
+server/dotnet_managed/

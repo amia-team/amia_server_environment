@@ -1,0 +1,28 @@
+2DA V2.0    
+
+
+     language      dwarf    elf      gnome    halfling halfelf  halforc  human    duergar  drow     aquatic  svirf    halfdrow fairy    goblin   kobold   aasimar  tiefling a_genasi e_genasi f_genasi w_genasi orog     ogrillion
+0    Special       xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+1    Abyssal       xxxx     xxxx     xxxx     xxxx     bonus    bonus    bonus    xxxx     bonus    xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+2    Auran         xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx
+3    Aquan         xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     bonus    auto     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx
+4    Celestial     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     auto     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+5    Common        auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto     auto
+6    Draconic      xxxx     bonus    bonus    xxxx     bonus    bonus    bonus    bonus    bonus    xxxx     xxxx     bonus    xxxx     xxxx     auto     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+7    Drow          xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     auto     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+8    DrowHandSign  xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+9    Dwarven       auto     xxxx     bonus    bonus    bonus    xxxx     bonus    auto     xxxx     xxxx     bonus    bonus    xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+10   Elven         xxxx     auto     bonus    bonus    bonus    xxxx     bonus    xxxx     bonus    auto     xxxx     auto     bonus    xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+11   Giant         bonus    xxxx     bonus    xxxx     bonus    bonus    bonus    bonus    xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    auto
+12   Gnome         bonus    bonus    auto     bonus    bonus    xxxx     bonus    xxxx     bonus    xxxx     auto     bonus    bonus    xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+13   Goblin        bonus    bonus    bonus    bonus    bonus    bonus    bonus    bonus    bonus    xxxx     bonus    bonus    xxxx     auto     bonus    bonus    xxxx     xxxx     xxxx     xxxx     xxxx     bonus    bonus
+14   Gnoll         xxxx     bonus    xxxx     xxxx     bonus    bonus    bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    bonus
+15   Halfling      xxxx     xxxx     xxxx     auto     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+16   Ignan         xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx
+17   Infernal      xxxx     xxxx     xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+18   Orc           bonus    bonus    bonus    bonus    bonus    auto     bonus    bonus    xxxx     xxxx     bonus    bonus    xxxx     bonus    bonus    bonus    xxxx     xxxx     xxxx     xxxx     xxxx     auto     xxxx
+19   Sylvan        xxxx     bonus    xxxx     xxxx     bonus    xxxx     bonus    xxxx     xxxx     xxxx     xxxx     bonus    auto     xxxx     xxxx     auto     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+20   Terran        bonus    xxxx     xxxx     xxxx     bonus    xxxx     bonus    bonus    xxxx     xxxx     bonus    bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     bonus    xxxx     xxxx     xxxx     xxxx
+21   Druidic       xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+22   ThievesCant   xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
+23   Undercommon   bonus    xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     auto     auto     xxxx     auto     auto     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx     xxxx
