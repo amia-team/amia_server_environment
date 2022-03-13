@@ -10,3 +10,6 @@ nwsync/bin/nwsync_crypto_sign
 *.bak
 *.mod
 server/dotnet_managed/
+*.bic
+*.7z
+*.zip
