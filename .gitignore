@@ -13,3 +13,4 @@ server/dotnet_managed/
 *.bic
 *.7z
 *.zip
+*.log
