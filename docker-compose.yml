@@ -3,7 +3,7 @@ services:
   nwserver:
     hostname: nwserver
     stop_signal: SIGINT
-    image: nwndotnet/anvil:8193.34.7
+    image: nwndotnet/anvil:8193.34.19
     env_file: ${PWD-.}/config/nwserver.env
     stdin_open: true
     tty: true
