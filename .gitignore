@@ -14,3 +14,6 @@ server/dotnet_managed/
 *.7z
 *.zip
 *.log
+*.json
+*.dll
+*.pdb
