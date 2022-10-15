@@ -1,9 +1,10 @@
 version: '3'
 services:
   nwserver:
-    hostname: nwserver
-    stop_signal: SIGINT
     image: nwndotnet/anvil:8193.34.19
+    hostname: nwserver
+    container_name: live-server
+    stop_signal: SIGINT
     env_file: ${PWD-.}/config/nwserver.env
     stdin_open: true
     tty: true
@@ -13,4 +14,16 @@ services:
     restart: unless-stopped
     ports:
       - "5121:5121/udp"
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - ${PWD-.}/config/db.env
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

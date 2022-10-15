@@ -17,3 +17,4 @@ server/dotnet_managed/
 *.json
 *.dll
 *.pdb
+config/db.env
