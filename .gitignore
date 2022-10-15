@@ -18,3 +18,4 @@ server/dotnet_managed/
 *.dll
 *.pdb
 config/db.env
+*.orig
