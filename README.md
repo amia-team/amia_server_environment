@@ -11,4 +11,4 @@ Build your Anvil plugins, then copy their output to a subdirectory of server/anv
 
 ## Loading the database
 
-Create a file the `config` folder named `db.env`, and create a variable inside the file named `POSTGRES_PASSWORD`. Assign the variable whatever value you like, e.g.: `POSTGRES_PASSWORD=1234`.
+Create a file in the `config` folder named `db.env`, and create a variable inside the file named `POSTGRES_PASSWORD`. Assign the variable whatever value you like, e.g.: `POSTGRES_PASSWORD=1234`.
