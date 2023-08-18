@@ -1,0 +1,53 @@
+version: '3'
+services:
+  live-server:
+    image: nwndotnet/anvil:8193.35.1
+    hostname: nwserver
+    container_name: live-server
+    stop_signal: SIGINT
+    env_file: 
+      - ${PWD-.}/config/nwserver.env
+      - ${PWD-.}/config/db.env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${PWD-.}/logs:/nwn/run/logs.0
+      - ${PWD-.}/server/:/nwn/home
+    restart: unless-stopped
+    ports:
+      - "5121:5121/udp"
+
+  test-server:
+    image: nwndotnet/anvil:8193.35.1
+    hostname: nwserver
+    container_name: live-server
+    stop_signal: SIGINT
+    env_file:
+      - ${PWD-.}/config/nwserver.env
+      - ${PWD-.}/config/db.env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${PWD-.}/logs:/nwn/run/logs.0
+      - ${PWD-.}/server/:/nwn/home
+    restart: unless-stopped
+    ports:
+      - "5121:5121/udp"
+
+  database:
+    image: postgres
+    container_name: database
+    restart: always
+    env_file:
+      - ${PWD-.}/config/db.env
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    env_file:
+      - ${PWD-.}/config/db.env
+    ports:
+      - "5050:80"
