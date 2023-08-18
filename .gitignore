@@ -19,3 +19,5 @@ server/dotnet_managed/
 *.pdb
 config/db.env
 *.orig
+cryptographic_secret
+*/cryptographic_secret
