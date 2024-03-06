@@ -8,6 +8,7 @@ nwsync/bin/nwsync_crypto_sign
 *.sqlite3
 *.bak
 *.mod
+server/anvil/
 server/dotnet_managed/
 *.bic
 *.7z
@@ -16,7 +17,6 @@ server/dotnet_managed/
 *.json
 *.dll
 *.pdb
-config/db.env
 *.orig
 cryptographic_secret
 */cryptographic_secret
