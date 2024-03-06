@@ -18,5 +18,9 @@ server/dotnet_managed/
 *.dll
 *.pdb
 *.orig
+*.env
 cryptographic_secret
 */cryptographic_secret
+server/override/
+logs/nwserverError1.txt
+logs/nwserverLog1.txt
