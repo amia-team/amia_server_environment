@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NWN.Toolbox</name>
+    </assembly>
+    <members>
+        <member name="T:Jorteck.Toolbox.Core.IWindowController">
+            <summary>
+            Internal interface - implement <see cref="T:Jorteck.Toolbox.Core.WindowController`1"/> instead.
+            </summary>
+        </member>
+        <member name="T:Jorteck.Toolbox.Core.IWindowView">
+            <summary>
+            Internal interface - implement <see cref="T:Jorteck.Toolbox.Core.WindowView`1"/> instead.
+            </summary>
+        </member>
+        <member name="T:Jorteck.Toolbox.Core.WindowAutoCloseService">
+            <summary>
+            Automatically closes an open window if the player moves from their original location.<br/>
+            Windows can be registered automatically by setting the <see cref="P:Jorteck.Toolbox.Core.WindowController`1.AutoClose"/> property, or manually added through this service.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.WindowController`1.View">
+            <summary>
+            The associated view for this window controller.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.WindowController`1.Token">
+            <summary>
+            The associated <see cref="T:Anvil.API.NuiWindowToken"/> for this window controller.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.WindowController`1.AutoClose">
+            <summary>
+            Gets or sets if the window should be automatically closed if the player moves.
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Core.WindowManager.OpenWindow``2(Anvil.API.NwPlayer,System.Action{``1})">
+            <summary>
+            Opens a window view using the specified controller.
+            </summary>
+            <param name="player">The player to show the window.</param>
+            <param name="configure">Additional configuration for the controller before it is initialized by the <see cref="T:Jorteck.Toolbox.Core.WindowManager"/>.</param>
+            <typeparam name="TView">The type of view to open.</typeparam>
+            <typeparam name="TController">The type of controller for the view.</typeparam>
+            <returns>The created controller. Null if the client cannot render windows.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Core.WindowManager.OpenWindow``1(Anvil.API.NwPlayer)">
+            <summary>
+            Opens a window view using the view's default controller.
+            </summary>
+            <param name="player">The player opening the window.</param>
+            <typeparam name="T">The type of view to open.</typeparam>
+        </member>
+        <member name="M:Jorteck.Toolbox.Core.WindowManager.OpenWindow(Anvil.API.NwPlayer,Jorteck.Toolbox.Core.IWindowView)">
+            <summary>
+            Opens a window view using the view's default controller.
+            </summary>
+            <param name="player">The player opening the window.</param>
+            <param name="view">The view to open.</param>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.IWizardStepController.View">
+            <summary>
+            Gets the associated view.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.IWizardStepController.Token">
+            <summary>
+            Gets the parent window token.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.IWizardStepController.CanCompleteStep">
+            <summary>
+            Gets if this step is considered "complete". Determines if the "Next" button should be enabled and clickable.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Core.IWizardStepController.StepTitle">
+            <summary>
+            The window title string to show while on this step.
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Core.IWizardStepController.OnClose">
+            <summary>
+            Called when leaving this step (next/previous buttons, close button).
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.NuiUtils.Assign``1(``0,``0@)">
+            <summary>
+            Assign a NUI element to an additional parameter.
+            </summary>
+            <param name="value">The value to assign.</param>
+            <param name="assign">The field/variable to assign the value.</param>
+            <typeparam name="T">The NUI element type.</typeparam>
+            <returns>The NUI element specified in value for fluent usage.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.NuiUtils.Configure``1(``0,System.Action{``0})">
+            <summary>
+            Configure a NUI element.
+            </summary>
+            <param name="value">The value to configure.</param>
+            <param name="configure">The configuration to change.</param>
+            <typeparam name="T">The NUI element type.</typeparam>
+            <returns>The NUI element specified in value for fluent usage.</returns>
+        </member>
+        <member name="T:Jorteck.Toolbox.Features.Chat.IChatCommand">
+            <summary>
+            A game chat command. Implement to add your own chat command.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.Command">
+            <summary>
+            The default name/alias for this command. Shown in the help list.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.Aliases">
+            <summary>
+            Additional aliases for this command. Not shown in the help list.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.DMOnly">
+            <summary>
+            If this command can only be used by DMs.<br/>
+            Ignored if the Permissions Module is enabled.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.PermissionKey">
+            <summary>
+            The permission key required to use this command. Defaults to "command.{Command}", with spaces replaced with "." to indicate sub commands.<br/>
+            Ignored if the Permissions Module is disabled.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.ArgCount">
+            <summary>
+            The number of arguments expected by this command. Supports the range syntax:<br/>
+            2 arguments: "2..2"<br/>
+            2 or more arguments: "2.."<br/>
+            No more than 2 arguments: "..2"<br/>
+            1-3 arguments: "1..3"
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.Description">
+            <summary>
+            The description for this command. Shown in the help list.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.Usages">
+            <summary>
+            A list of valid usages for this command. Shown in the help list.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.Chat.IChatCommand.IsAvailable">
+            <summary>
+            Determines if this command should show in help lists, and can be executed.<br/>
+            This is not for permissions, but raw server requirements (e.g. dependencies)
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.Chat.IChatCommand.ProcessCommand(Anvil.API.NwPlayer,System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+            Process this command with the specified arguments.
+            </summary>
+            <param name="caller">The calling player of this command.</param>
+            <param name="args">Any additional arguments specified.</param>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.GetBroadcastMode(Anvil.API.NwPlayer)">
+            <summary>
+            Get a player's dice roll broadcast setting.
+            </summary>
+            <param name="player">The player to query.</param>
+            <returns>The player's current broadcast setting.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.SetBroadcastMode(Anvil.API.NwPlayer,Jorteck.Toolbox.Features.RollBroadcastTargets)">
+            <summary>
+            Set a player's dice roll broadcast setting.
+            </summary>
+            <param name="player">The player to change setting.</param>
+            <param name="newValue">The new broadcast targets.</param>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.RollDice(Anvil.API.NwCreature,System.Int32,System.Int32,Jorteck.Toolbox.Features.RollBroadcastTargets)">
+            <summary>
+            Performs a basic dice roll with no modifiers.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="numSides">The number of dice sides.</param>
+            <param name="numDice">The number of dice to roll.</param>
+            <param name="broadcastTargets">The targets that should see the results of the dice roll.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.AbilityCheckVsDc(Anvil.API.NwCreature,Anvil.API.Ability,System.Int32,System.Int32@,Jorteck.Toolbox.Features.CreatureRollSettings)">
+            <summary>
+            Performs an ability check vs the specified dc.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="ability">The ability to roll.</param>
+            <param name="dc">The DC of the ability check to exceed or meet to be considered a success.</param>
+            <param name="abilityCheckDifference">The difference between the creatures roll, and the DC.</param>
+            <param name="settings">Additional settings for the roll.</param>
+            <returns>True if the ability check passed the DC.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.AbilityRoll(Anvil.API.NwCreature,Anvil.API.Ability,Jorteck.Toolbox.Features.RollBroadcastTargets)">
+            <summary>
+            Performs an ability roll on the specified creature.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="ability">The ability to roll.</param>
+            <param name="broadcastTargets">The targets that should see the results of the ability roll.</param>
+            <returns>The ability roll total.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.SkillRoll(Anvil.API.NwCreature,Anvil.API.NwSkill,Jorteck.Toolbox.Features.RollBroadcastTargets)">
+            <summary>
+            Performs a skill roll on the specified creature.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="skill">The skill to roll.</param>
+            <param name="broadcastTargets">The targets that should see the results of the skill roll.</param>
+            <returns>The skill roll total.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.SkillCheckVsDc(Anvil.API.NwCreature,Anvil.API.NwSkill,System.Int32,System.Int32@,Jorteck.Toolbox.Features.CreatureRollSettings)">
+            <summary>
+            An extended version of <see cref="M:Anvil.API.NwCreature.DoSkillCheck(Anvil.API.NwSkill,System.Int32)"/> exposing additional data and settings.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="skill">The skill to roll.</param>
+            <param name="dc">The DC of the skill check to exceed or meet to be considered a success.</param>
+            <param name="skillCheckDifference">The difference between the creatures roll, and the DC.</param>
+            <param name="settings">Additional settings for the roll.</param>
+            <returns>True if the skill check passed the DC.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.SavingThrowRoll(Anvil.API.NwCreature,Anvil.API.SavingThrow,Jorteck.Toolbox.Features.RollBroadcastTargets)">
+            <summary>
+            Performs a saving throw on the specified creature.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="savingThrow">The saving throw to roll.</param>
+            <param name="broadcastTargets">The targets that should see the results of the saving throw roll.</param>
+            <returns>The saving throw roll total.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.DiceRollService.SavingThrowRollVsDc(Anvil.API.NwCreature,Anvil.API.SavingThrow,System.Int32,System.Int32@,Jorteck.Toolbox.Features.CreatureRollSettings)">
+            <summary>
+            Performs a saving throw vs the specified dc.
+            </summary>
+            <param name="creature">The creature to perform the roll.</param>
+            <param name="savingThrow">The saving throw to roll.</param>
+            <param name="dc">The DC of the saving throw to exceed or meet to be considered a success.</param>
+            <param name="savingThrowDifference">The difference between the creatures roll, and the DC.</param>
+            <param name="settings">Additional settings for the roll.</param>
+            <returns>True if the saving throw passed the DC.</returns>
+        </member>
+        <member name="F:Jorteck.Toolbox.Features.RollBroadcastTargets.None">
+            <summary>
+            Don't broadcast the roll
+            </summary>
+        </member>
+        <member name="F:Jorteck.Toolbox.Features.RollBroadcastTargets.PrivateLog">
+            <summary>
+            The player's combat log
+            </summary>
+        </member>
+        <member name="F:Jorteck.Toolbox.Features.RollBroadcastTargets.PrivateChat">
+            <summary>
+            The player's chat log
+            </summary>
+        </member>
+        <member name="F:Jorteck.Toolbox.Features.RollBroadcastTargets.LocalTalk">
+            <summary>
+            Broadcast in <see cref="F:Jorteck.Toolbox.Features.Chat.ChatVolume.Talk"/>, shown to nearby players.
+            </summary>
+        </member>
+        <member name="F:Jorteck.Toolbox.Features.RollBroadcastTargets.DM">
+            <summary>
+            The DM chat channel
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.Languages.LanguageUtils.TranslateUsingDictionary(Jorteck.Toolbox.Features.Languages.ILanguage,System.Collections.Generic.Dictionary{System.Char,System.String},System.String,System.Int32)">
+            <summary>
+            Generates a translation using the specified character dictionary as a lookup.
+            </summary>
+            <param name="language">The language that is generating the translation.</param>
+            <param name="dictionary">The dictionary to use as a lookup.</param>
+            <param name="phrase">The phrase to translate.</param>
+            <param name="proficiency">The character's proficiency with the language.</param>
+            <returns>The generated language output.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.Languages.LanguageUtils.TranslateWithSeed(Jorteck.Toolbox.Features.Languages.ILanguage,System.Int32,System.String,System.Int32)">
+            <summary>
+            Generates a deterministic translation using the given seed.
+            </summary>
+            <param name="language">The language that is generating the translation.</param>
+            <param name="seed">The seed to use for generating the translation.</param>
+            <param name="phrase">The phrase to translate.</param>
+            <param name="proficiency">The character's proficiency with the language.</param>
+            <returns>The generated language output.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.Permissions.PermissionsService.HasPermission(Anvil.API.NwPlayer,System.String,System.Boolean)">
+            <summary>
+            Gets if a player has the specified permission.
+            </summary>
+            <param name="player">The player to check.</param>
+            <param name="permission">The permission to query.</param>
+            <param name="defaultIfDisabled">The default value to return if the PermissionService is disabled.</param>
+            <returns>True if the player has the specified permission, otherwise false.</returns>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.Permissions.PermissionsService.GetGroups(Anvil.API.NwPlayer,System.Boolean)">
+            <summary>
+            Gets a list of groups that the specified player is a member of.
+            </summary>
+            <param name="player">The player to query.</param>
+            <param name="includeDefault">If true, includes groups that the player is a part of by default.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.ServerRestart.ServerRestartService.TimeUntilRestart">
+            <summary>
+            Gets or sets the time until the server is shutdown/restarted.
+            </summary>
+        </member>
+        <member name="P:Jorteck.Toolbox.Features.ServerRestart.ServerRestartService.IsEnabled">
+            <summary>
+            Gets if automatic server restart is configured.
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.ServerRestart.ServerRestartService.SendRestartTimeMessageToAllPlayers">
+            <summary>
+            Broadcasts the restart timer warning message to all players on the server.
+            </summary>
+        </member>
+        <member name="M:Jorteck.Toolbox.Features.ServerRestart.ServerRestartService.SendRestartTimeMessageToPlayer(Anvil.API.NwPlayer)">
+            <summary>
+            Sends the restart timer warning message to a specific player on the server.
+            </summary>
+            <param name="player">The player to send the message to.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,74 @@
+version: 1
+# ChatCommands is a module that provides a system of implementing chat commands in C#. It automatically handles command argument parsing, help lists and more.
+chat_commands:
+# Enable/disable the chat command system.
+  enabled: true
+  # Character prefixes that define if a message is detected as a command.
+  command_prefixes:
+  - /
+  # A list of words/prefixes that are ignored by command processing. E.g. '/' ignores all usages of '//' if the command prefix is /.
+  ignore_commands:
+  - /
+# ServerRestart is a module that automatically shutdowns the server after a period of time. A custom start script, or service like docker is required to automatically start the server again after shutdown.
+server_restart:
+# Enable/disable automatic server restarts.
+  enabled: false
+  # Adds support for managing the server restart schedule with chat commands. Requires the ChatCommand module to be enabled.
+  chat_command_enable: true
+  # The amount of time in seconds to trigger a restart after the server has started.
+  restart_time_secs: 158400
+  # Defines a restart schedule using a cron expression: https://crontab.guru/
+  # If defined, overrides restart_time_secs.
+  restart_time_cron: ''
+  # The periods at which restart timer warnings are broadcasted to all players.
+  restart_warning_secs:
+  - 0
+  - 60
+  - 300
+  - 1800
+  - 3600
+  - 14400
+  # The boot message shown to players when the server is restarting.
+  boot_message: The server is restarting.
+  # The warning message shown to players at each restart_warning_secs period.
+  warn_message: The server will restart in <time>.
+  # The warning message shown to players when server restart is imminent.
+  warn_message_now: The server is restarting now!
+# ToolboxWindows is a module that adds a number of utility windows and tools for improved DM functionality, server administration and more.
+toolbox_windows:
+# Should the toolbox button be shown to players who have permissions?
+  show_toolbox_button: true
+  # The position of the toolbox button.
+  toolbox_button_position:
+    x: 725
+    y: 0
+  # How the "windows" list should be interpreted. "Whitelist" and "Blacklist" are supported as values. Whitelist indicates that only the windows listed will be available, while Blacklist indicates that all windows are available except the ones listed.
+  list_mode: Blacklist
+  # The list of windows to use as the whitelist/blacklist. Dependant on list_mode.
+  windows: []
+# Permissions is a module that allows server admins to control what tools and features players/DMs can use by creating groups and assigning permissions.
+permissions:
+# Enable/disable the permission system.
+  enabled: false
+  # Adds support for managing permissions with chat commands. Requires the ChatCommand module to be enabled.
+  chat_command_enable: true
+  # The base chat command name.
+  chat_command: perms
+# VersionCheck is a module that defines client version requirements to connect to the server (e.g. for NUI).
+version_check:
+# Enable/disable the version check system.
+  enabled: false
+  # The minimum version for the server. Clients who are below the version will be kicked when they attempt to connect.
+  minimum_version:
+    major_version: 8193
+    minor_version: 30
+  # The recommended version for the server. Clients who are below the recommended version will see a warning message after they connect to the server.
+  recommended_version:
+    major_version: 8193
+    minor_version: 34
+# Languages is a module that allows characters to speak in different languages.
+languages:
+# Enable/disable the language system.
+  enabled: false
+  # Should the built-in languages be enabled? (Abyssal, Animal, Celestial, Draconic, Drow, Dwarven, Elven, Gnome, Goblin, Halfling, Infernal, Mulhorandi, Orc, Rashemi, Sylvan, Thieves' Cant)
+  enable_built_in: true

@@ -1,0 +1,16 @@
+D: /lib
+D: /lib/net6.0
+F: /lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.dll
+F: /lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.xml
+D: /package
+D: /package/services
+D: /package/services/metadata
+D: /package/services/metadata/core-properties
+F: /package/services/metadata/core-properties/d72455d9078440dab85fb32077f6d344.psmdcp
+D: /_rels
+F: /_rels/.rels
+F: /.signature.p7s
+F: /Icon.png
+F: /microsoft.entityframeworkcore.sqlite.core.7.0.5.nupkg
+F: /Microsoft.EntityFrameworkCore.Sqlite.Core.nuspec
+F: /[Content_Types].xml

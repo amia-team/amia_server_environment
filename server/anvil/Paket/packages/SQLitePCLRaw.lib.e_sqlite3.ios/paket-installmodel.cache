@@ -1,0 +1,16 @@
+D: /lib
+D: /lib/net6.0-ios14.2
+F: /lib/net6.0-ios14.2/SQLitePCLRaw.lib.e_sqlite3.ios.dll
+D: /lib/xamarinios10
+F: /lib/xamarinios10/SQLitePCLRaw.lib.e_sqlite3.ios.dll
+D: /package
+D: /package/services
+D: /package/services/metadata
+D: /package/services/metadata/core-properties
+F: /package/services/metadata/core-properties/0ccbea43ba8940419d867937e6e9fad4.psmdcp
+D: /_rels
+F: /_rels/.rels
+F: /.signature.p7s
+F: /sqlitepclraw.lib.e_sqlite3.ios.2.1.4.nupkg
+F: /SQLitePCLRaw.lib.e_sqlite3.ios.nuspec
+F: /[Content_Types].xml
