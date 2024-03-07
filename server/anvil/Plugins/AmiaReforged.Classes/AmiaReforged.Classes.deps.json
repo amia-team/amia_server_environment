@@ -1,0 +1,163 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "AmiaReforged.Classes/1.0.0": {
+        "dependencies": {
+          "NUnit": "3.13.3",
+          "NWN.Anvil": "8193.35.3",
+          "NWN.Core": "8193.35.21"
+        },
+        "runtime": {
+          "AmiaReforged.Classes.dll": {}
+        }
+      },
+      "LightInject/6.6.4": {
+        "runtime": {
+          "lib/net6.0/LightInject.dll": {
+            "assemblyVersion": "6.6.4.0",
+            "fileVersion": "6.6.4.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "NLog/5.2.5": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.5.2160"
+          }
+        }
+      },
+      "NUnit/3.13.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "assemblyVersion": "3.13.3.0",
+            "fileVersion": "3.13.3.0"
+          }
+        }
+      },
+      "NWN.Anvil/8193.35.3": {
+        "dependencies": {
+          "LightInject": "6.6.4",
+          "NLog": "5.2.5",
+          "NWN.Core": "8193.35.21",
+          "NWN.Native": "8193.35.9",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/net7.0/NWN.Anvil.dll": {
+            "assemblyVersion": "8193.35.3.0",
+            "fileVersion": "8193.35.3.0"
+          }
+        }
+      },
+      "NWN.Core/8193.35.21": {
+        "runtime": {
+          "lib/net7.0/NWN.Core.dll": {
+            "assemblyVersion": "8193.35.21.0",
+            "fileVersion": "8193.35.21.0"
+          }
+        }
+      },
+      "NWN.Native/8193.35.9": {
+        "runtime": {
+          "lib/net7.0/NWN.Native.dll": {
+            "assemblyVersion": "8193.35.9.0",
+            "fileVersion": "8193.35.9.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AmiaReforged.Classes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LightInject/6.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xId1F9OpzVvyNu3wcdPR4EcNUihcT5U9wiUJOi0tetuDOia1uAiFJzqmYGdRPsqAsgDb6o8sfoQCx5yMFFDsVw==",
+      "path": "lightinject/6.6.4",
+      "hashPath": "lightinject.6.6.4.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "NLog/5.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mMXtbAxfNzqkXcBjhJ3wN3rH7kwUZ0JL0GrUBI/lso7+tQ/HC4e5SnlmR3R5qQ9zWbqMbjxeH37rIf0yQGWTiA==",
+      "path": "nlog/5.2.5",
+      "hashPath": "nlog.5.2.5.nupkg.sha512"
+    },
+    "NUnit/3.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "path": "nunit/3.13.3",
+      "hashPath": "nunit.3.13.3.nupkg.sha512"
+    },
+    "NWN.Anvil/8193.35.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X2C6siUaATnW0Xya52cj+fR96Dh+CsALP6VKLMs7TODgqp43Gr8k1nnSdAYNQ4bDzPuL/aJJioNk4tbMdouQHQ==",
+      "path": "nwn.anvil/8193.35.3",
+      "hashPath": "nwn.anvil.8193.35.3.nupkg.sha512"
+    },
+    "NWN.Core/8193.35.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6RE8aS+7qFDMsCU4trY3l95114roymwvGakiGAewbMnNmsaQgIreG4zSxJPd+p/70lDCeKj1jO9aY51cMhBvvQ==",
+      "path": "nwn.core/8193.35.21",
+      "hashPath": "nwn.core.8193.35.21.nupkg.sha512"
+    },
+    "NWN.Native/8193.35.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Iq8791DrHskOn2UicenI0RqZITBnRPrrL/uyq5b/0fcpWfMl/pmz9vy9g0mStdnXinmMWgx1R5ass3AG+vn7Q==",
+      "path": "nwn.native/8193.35.9",
+      "hashPath": "nwn.native.8193.35.9.nupkg.sha512"
+    }
+  }
+}
