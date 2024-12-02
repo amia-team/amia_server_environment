@@ -1,7 +1,7 @@
 version: '3'
 services:
   live-server:
-    image: nwndotnet/anvil:8193.36.1
+    image: nwndotnet/anvil:8193.36.2-dev.17.r228e99d3
     hostname: nwserver
     container_name: live-server
     stop_signal: SIGINT
