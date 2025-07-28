@@ -1,27 +1,40 @@
-version: '3'
 services:
-  live-server:
-    image: nwndotnet/anvil:8193.36.2-dev.17.r228e99d3
+  dev:
+    image: nwndotnet/anvil:8193.37.2
+    network_mode: host
     hostname: nwserver
     container_name: live-server
     stop_signal: SIGINT
-    env_file: 
+    env_file:
       - ${PWD-.}/config/dev.env
       - ${PWD-.}/config/db.env
     stdin_open: true
     tty: true
     volumes:
       - ${PWD-.}/logs:/nwn/run/logs.0
-      - ${PWD-.}/server/:/nwn/home
+      - ${PWD-.}:/nwn/home
     restart: unless-stopped
-    ports:
-      - "5124:5124/udp"
 
   database:
     image: postgres
+    # network_mode: host
     container_name: database
     restart: always
-    env_file:
-      - ${PWD-.}/config/db.env
     ports:
       - "5432:5432"
+    env_file:
+      - ${PWD-.}/config/db.env
+    volumes:
+      - ${PWD-.}/pgdata-dev:/var/lib/postgresql/data
+
+  enginedb:
+    image: postgres
+    # network_mode: host
+    container_name: enginedb
+    restart: always
+    ports:
+      - "5433:5432"
+    env_file:
+      - ${PWD-.}/config/enginedb.env
+    volumes:
+      - ${PWD-.}/pgdata-engine-dev:/var/lib/postgresql/data
